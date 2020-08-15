@@ -252,6 +252,7 @@
                             <tbody>
                                 <td colspan="9" class="text-center">
                                     <h3 id="someFrameTitle" style="color: red;">No results have been generated yet!</h3>
+									<h6><a id="someFrameHref" style="display:none;" ></a></h6>
 									<iframe style="display: none;" name="someFrame" id="someFrame" width="100%" height="315"></iframe>
                                 </td>
                             </tbody>
@@ -261,6 +262,7 @@
                 </div>
             </div>
         </div>
+		
 		<div class="table-div" style="margin-bottom:3%;margin-top:1%;">
             <div class="card mb-4">
                 <div class="card-header">
@@ -272,8 +274,8 @@
                             
                             <tbody>
                                 <td colspan="9" class="text-center">
-                                    <h3 id="someFrameTitle1" style="color: red;">No results have been generated yet!</h3>
-									<iframe src="/mapper-template" name="someFrame1" id="someFrame1" width="100%" height="315"></iframe>
+                                    <h6 id="someFrameTitle1" style="color: red;">No results yet. It would take sometime in its 1st load.</h6>
+									<iframe  style="display:none;" name="someFrame1" id="someFrame1" width="100%" height="315"></iframe>
                                 </td>
                             </tbody>
                             
@@ -378,9 +380,14 @@ function getMap() {
            },
            success: function (data) {		   // `data` is the return of the `load_cities` view function
     		
-			//$("#someFrame").show();
-			//$("#someFrameTitle").hide();
-			//$("#someFrame").attr("src", data);
+			$("#someFrame").show();
+			$("#someFrame1").show();
+			$("#someFrameTitle").hide();
+			$("#someFrameTitle1").hide();
+			$("#someFrame").attr("src", data[0]);
+			$("#someFrameHref").show();
+			$("#someFrameHref").attr("href", data[1]);
+			$("#someFrame1").attr("src", '/mapper-template');
            }
          });
   

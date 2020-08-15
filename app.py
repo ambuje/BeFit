@@ -77,8 +77,13 @@ def index_map(string):
         
     
     #output=backend.route((lat,long),km,mode,temp)
-    print(output)
-    return 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyAwrCjWGJkvadPAu_A6nP4vRhAqk0oxD8M&origin=28.507795599999998%2C+77.2544234&destination=28.507795599999998%2C+77.2544234&mode=walking&waypoints=28.503478888290246%2C+77.26621950592026%7C28.49348379981598%2C+77.27416115517933%7C28.503478888290246%2C+77.26621950592026'
+    out1="".join(str(output[0]).split('?api=1')[1])
+    out2=out1.split("&travelmode")
+    out2='https://www.google.com/maps/embed/v1/directions?key=AIzaSyAwrCjWGJkvadPAu_A6nP4vRhAqk0oxD8M'+out2[0]+"&mode"+out2[1]
+    
+    #https://www.google.com/maps/dir/?api=1&origin=29.86308966681687%2C+77.90072298947152&destination=29.86308966681687%2C+77.90072298947152&travelmode=walking&waypoints=29.863089641459847%2C+77.903310487057%7C29.86627908713111%2C+77.9043823800247%7C29.86905659691511%2C+77.9043824209547%7C29.86627908713111%2C+77.9043823800247%7C29.863089641459847%2C+77.903310487057
+    return [out2,output[1]]
+    #return ['https://www.google.com/maps/embed/v1/directions?key=AIzaSyAwrCjWGJkvadPAu_A6nP4vRhAqk0oxD8M&origin=28.507795599999998%2C+77.2544234&destination=28.507795599999998%2C+77.2544234&mode=walking&waypoints=28.503478888290246%2C+77.26621950592026%7C28.49348379981598%2C+77.27416115517933%7C28.503478888290246%2C+77.26621950592026',]
 
 
 app.run(port=8000)
