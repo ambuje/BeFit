@@ -248,7 +248,7 @@ def route(coorigin,disto,modee,temp):
   #gmap.scatter(marker_lats, marker_lngs, 'k', marker=True)
   #gmap.heatmap(heat_lats, heat_lngs)
 
-  gmap.draw("mymap_3.html")
+  gmap.draw("templates/mapper.html")
   orig=''
   orig=str(x)+", "+str(y)
   origin_loc = orig
