@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <!--<link rel="shortcut icon" type="image/png" href="https://i.ya-webdesign.com/images/happy-sad-mask-png-6.png">-->
+    <title>BeFit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="project site">
+    <meta name="author" content="Gagan Talreja">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-darkmode@0.5.0/dist/darktheme.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	 <!-- Favicons -->
+        <link rel="apple-touch-icon" href="https://www.elastic.co/favicon.ico" sizes="180x180">
+        <link rel="icon" href="https://www.elastic.co/favicon.ico" sizes="32x32" type="image/png">
+        <link rel="icon" href="https://www.elastic.co/favicon.ico" sizes="16x16" type="image/png">
+        <link rel="manifest" href="https://www.elastic.co/favicon.ico">
+        <link rel="mask-icon" href="https://www.elastic.co/favicon.ico" color="#563d7c">
+        <link rel="icon" href="https://www.elastic.co/favicon.ico">
+        <meta name="theme-color" content="#563d7c">
+    <style>
+            .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+            @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+            }
+        </style>
+        <style>
+            body {
+            color: #506784;
+            background:
+            linear-gradient(
+            rgba(255, 255, 255, 0.6),
+            rgba(255, 255, 255, 0.6)
+            ),
+            url("https://raw.githubusercontent.com/plotly/dash-docs/master/images/dash-pattern.png");
+            margin: 0px;
+            }
+            ::-webkit-scrollbar {
+            width: 15px;
+            }
+            ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            }
+            ::-webkit-scrollbar-thumb {
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            }
+        </style>
+
+<style>
+    .main-head {
+        padding-top: 30px;
+        font-size: 70px;
+        font-family: 'Acme';
+    }
+
+    .form-group {
+        padding-top: 20px;
+        font-family: 'Montserrat'serif;
+    }
+
+
+    h5 {
+        padding-top: 10px;
+        font-family: 'Montserrat'serif;
+    }
+
+    body {
+        color: #506784;
+        background:
+            linear-gradient(rgba(255, 255, 255, 0.6),
+                rgba(255, 255, 255, 0.6)),
+            url("");
+        margin: 0px;
+    }
+
+    ::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 15px;
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .negative {
+        color: red;
+        font-weight: 500;
+    }
+
+    .positive {
+        color: green;
+        font-weight: 500;
+    }
+
+    .neutral {
+        color: blue;
+        font-weight: 500;
+    }
+    
+    .chart {
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+
+    .table-div {
+
+        padding-top: 60px;
+        font-family: 'Raleway';
+    }
+
+    .result-head {
+        font-family: 'Raleway';
+    }
+
+    @media screen and (max-width: 600px) {
+
+        .text-form {
+            padding: none;
+        }
+
+        .file-form {
+            padding: none;
+        }
+
+        h5 {
+            font-size: 16px;
+            line-height: 25px;
+        }
+
+        .main-head {
+            font-size: 60px;
+        }
+
+    }
+
+</style>
+ <style>
+            body {
+            color: #506784;
+            background:
+            linear-gradient(
+            rgba(255, 255, 255, 0.6),
+            rgba(255, 255, 255, 0.6)
+            ),
+            url("https://raw.githubusercontent.com/plotly/dash-docs/master/images/dash-pattern.png");
+            margin: 0px;
+            }
+            ::-webkit-scrollbar {
+            width: 5px;
+            }
+            ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            }
+            ::-webkit-scrollbar-thumb {
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            }
+        </style>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		 <link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+ <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+            <h5 class="my-0 mr-md-auto font-weight-normal"><a class="p-2 text-dark" href="/">BeFit</a></h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark" href="/">Home</a>
+                <a class="p-2 text-dark" href="/pollution">Pollution</a>
+                <a class="p-2 text-dark" href="/exercise">Exercise</a>
+            </nav>
+            <a class="btn btn-outline-primary" target="_blank" href="https://twitter.com/intent/tweet?text=Awsome%20%23Health%20and%20%23Fitness%20Platform.">Share <span class="fa fa-twitter"></span></a>
+        </div>
+		
+    <div class="container">
+        <div class="text-center">
+            <h1 class="main-head" style="color: black;">BeFit NAME</h1>
+            <h5 style="color: black;"><strong>A PROGRAM THAT CAN BE USED FOR NOTHING.</strong></h5>
+        </div>
+		<div id="location">	
+				<p id="BeFit"></p>
+                <button onclick="getLocation()" class="color btn btn-lg btn-secondary inner cover mastfoot mt-auto pricing-header  mx-auto text-center">GET LOCATION</button>
+		</div>
+		<p id="locationText" style="margin-top: 2%; margin-bottom:-1%;"></p>
+        <div class="row">
+            <div class="col-sm-2 text-form">
+				<div class="parameter" style="display:none;">
+         
+                    <div class="form-group">
+                        <label for="text-box" class="color"><b>Total KM</b></label>
+                        <input type="text" name="text" class="form-control" id="text-box" aria-describedby="label-text" placeholder="Total Km">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                    <button onclick="getMap()" type="submit" class="color btn btn-lg btn-secondary inner cover mastfoot mt-auto pricing-header  mx-auto text-center">GET RESULTS</button>
+					
+            
+				</div>
+				<p id="hiddenBox" style="display:none;">
+				</p>
+            </div>
+            <div class="col-sm-10">
+               <div class="container color">
+  <form class="parameter" style="display:none;">
+    <div class="form-group">
+    <label for="text-box" class="color"><b>Mode</b></label>
+	<p style="margin-top:-1.5%;"></p>
+    <label class="radio-inline">
+      <input id="walking" value="walking" type="radio" name="optradio" checked>‏‏‎ ‎Walking‏‏‎ ‎‏‏‎ ‎
+    </label>
+    <label class="radio-inline">
+      <input id="cycling" value="cycling" type="radio" name="optradio">‏‏‎ ‎Cycling
+    </label>
+	</div>
+  </form>
+</div>
+            </div>
+        </div>
+        
+        <div class="table-div">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fa fa-table mr-1"></i><b>Optimised pollution free route</b>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            
+                            <tbody>
+                                <td colspan="9" class="text-center">
+                                    <h3 id="someFrameTitle" style="color: red;">No results have been generated yet!</h3>
+									<iframe style="display: none;" name="someFrame" id="someFrame" width="100%" height="315"></iframe>
+                                </td>
+                            </tbody>
+                            
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="table-div" style="margin-bottom:3%;margin-top:1%;">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fa fa-table mr-1"></i><b>Optimised pollution map</b>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            
+                            <tbody>
+                                <td colspan="9" class="text-center">
+                                    <h3 id="someFrameTitle1" style="color: red;">No results have been generated yet!</h3>
+									<iframe src="/mapper-template" name="someFrame1" id="someFrame1" width="100%" height="315"></iframe>
+                                </td>
+                            </tbody>
+                            
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+	    
+		<div class="row color">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+		<footer class="mastfoot mt-auto color" style=" bottom: 0  !important;text-align:center !important;width: 100%; margin-top: 10% !important;">
+            <div class="inner color">
+                <p class="color">Made with &#128420; by <a target="_blank" href="github:repo">Team</a></p>
+            </div>
+        </footer>
+		</div>
+		
+		</div>
+		
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+	<!--<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="/static/main.js"></script>-->
+    <!--<script>
+        // Set new default font family and font color to mimic Bootstrap's default styling
+        Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+        Chart.defaults.global.defaultFontColor = '#292b2c';
+        
+        // Bar Chart Example
+        var dynamicColors = function() {
+            var r = Math.floor(Math.random() * 255);
+            var g = Math.floor(Math.random() * 255);
+            var b = Math.floor(Math.random() * 255);
+            return "rgb(" + r + "," + g + "," + b + ")";
+         };
+        
+        $(document).ready(function() {
+
+            var options = {
+                saveInCookies: false, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+            $('.color').css({
+                'color': 'black'
+            });
+
+            $('.darkmode-toggle').on('click', function() {
+                var class_ = $('body').attr('class');
+                if (class_ == "") {
+                    $('.color').css({
+                        'color': 'black'
+                    });
+                } else {
+                    $('.color').css({
+                        'color': 'white'
+                    });
+                }
+
+            });
+            $('.darkmode-toggle').click();
+        });
+
+    </script>-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+var x = document.getElementById("BeFit");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+    navigator.geolocation.getCurrentPosition(showPosition, showError,options);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+
+
+
+function getMap() {
+   $.ajax({                       // initialize an AJAX request
+       type:"POST",
+           url: "/map"+$('#hiddenBox').text()+",$,"+ $('#text-box').val()+",$,"+$('input[name="optradio"]:checked').val(),                    // set the url of the request (= localhost:8000/hr/ajax/load-cities/)
+           data: {
+             'coordinates': $('#hiddenBox').text(),'km': $('#text-box').val()      // add the country id to the GET parameters
+           },
+           success: function (data) {		   // `data` is the return of the `load_cities` view function
+    		
+			//$("#someFrame").show();
+			//$("#someFrameTitle").hide();
+			//$("#someFrame").attr("src", data);
+           }
+         });
+  
+}
+
+
+function showPosition(position) {
+       $('#location').hide(); 
+	   $('.parameter').show();
+	   $("#hiddenBox").text(position.coords.latitude+",$,"+  position.coords.longitude);
+       $.ajax({                       // initialize an AJAX request
+       type:"POST",
+           url: "/location"+$('#hiddenBox').text() ,                    // set the url of the request (= localhost:8000/hr/ajax/load-cities/)
+           data: {
+             'coordinates': $('#hiddenBox').text(),'km': $('#text-box').val()      // add the country id to the GET parameters
+           },
+           success: function (data) {		   // `data` is the return of the `load_cities` view function
+    		$("#locationText").show();
+			$("#locationText").text(data);
+           }
+         }); 	   
+  //x.innerHTML = "Latitude: " + position.coords.latitude + 
+  //"<br>Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+</script>
+    
+</body>
+
+</html>
