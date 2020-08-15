@@ -4,6 +4,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 import engine
 from geopy.geocoders import Nominatim
 from bs4 import BeautifulSoup as bsa
+from flask import jsonify
 #from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -65,15 +66,18 @@ def index_map(string):
         print(html)
     fin_list=html
     temp=fin_list[-1]
+    print(fin_list)
     output=['','']
-    try:
-      output=engine.route((lat,long),km,mode,temp)
-    except Exception as e:
-        print(e, "ERROR")
-        if(len(fin_list)>0):
+    flag=1
+    #try:
+    #  output=engine.route((lat,long),km,mode,temp)
+    while len(fin_list)>0 and flag==1:
+        try:
+            output=engine.route((lat,long),km,mode,temp)
+            flag=0
+        except Exception as e:
             fin_list.pop()
             temp=fin_list[-1]
-            output=engine.route((lat,long),km,mode,temp)
         
     
     #output=backend.route((lat,long),km,mode,temp)
@@ -82,7 +86,9 @@ def index_map(string):
     out2='https://www.google.com/maps/embed/v1/directions?key=AIzaSyAwrCjWGJkvadPAu_A6nP4vRhAqk0oxD8M'+out2[0]+"&mode"+out2[1]
     
     #https://www.google.com/maps/dir/?api=1&origin=29.86308966681687%2C+77.90072298947152&destination=29.86308966681687%2C+77.90072298947152&travelmode=walking&waypoints=29.863089641459847%2C+77.903310487057%7C29.86627908713111%2C+77.9043823800247%7C29.86905659691511%2C+77.9043824209547%7C29.86627908713111%2C+77.9043823800247%7C29.863089641459847%2C+77.903310487057
-    return [out2,output[1]]
+    print("out 2", out2)
+    d={0:out2,1:output[1]}
+    return jsonify(d)
     #return ['https://www.google.com/maps/embed/v1/directions?key=AIzaSyAwrCjWGJkvadPAu_A6nP4vRhAqk0oxD8M&origin=28.507795599999998%2C+77.2544234&destination=28.507795599999998%2C+77.2544234&mode=walking&waypoints=28.503478888290246%2C+77.26621950592026%7C28.49348379981598%2C+77.27416115517933%7C28.503478888290246%2C+77.26621950592026',]
 
 
