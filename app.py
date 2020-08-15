@@ -92,7 +92,7 @@ def index_map(string):
     #return ['https://www.google.com/maps/embed/v1/directions?key=AIzaSyAwrCjWGJkvadPAu_A6nP4vRhAqk0oxD8M&origin=28.507795599999998%2C+77.2544234&destination=28.507795599999998%2C+77.2544234&mode=walking&waypoints=28.503478888290246%2C+77.26621950592026%7C28.49348379981598%2C+77.27416115517933%7C28.503478888290246%2C+77.26621950592026',]
 
 
-app.run(port=8000)
+app.run()
 
 
 '''  
